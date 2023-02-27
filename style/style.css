@@ -1,0 +1,386 @@
+/*Шрифт для хедера*/
+@font-face {
+    font-family: 'BoltRounded';
+    font-style: normal;
+    font-weight: normal;
+    src: local("Bolt Rounded"),
+    url(../fonts/Bolt\ Rounded.woff2),
+    url(../fonts/Bolt\ Rounded.woff);
+}
+
+/*Подключение шрифтов: https://habr.com/ru/company/htmlacademy/blog/552388/*/
+
+header {
+    background-color: whitesmoke;
+    height: 70px;
+    max-height: 100px;
+    border-radius: 10px;
+    border-color: black;
+    border-style: dotted;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+
+.menu
+{
+    font-size: 20px;
+    font-family: 'BoltRounded';
+    
+}
+
+
+/*https://bureau.ru/soviet/20200312/*/
+/*https://tpverstak.ru/flex-cheatsheet/*/
+.menu
+{
+    flex-grow: 0;
+}
+
+.menu ul 
+{
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 20px;
+    line-height: 18px;
+    white-space: nowrap; /*Запрет на перенос слов в Header*/
+}
+
+.menu li
+{
+    margin-right: 10px; /*Отступы между пунктами*/
+}
+
+.menu li:last-child
+{
+    margin-right: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.menu a
+{
+    color: #000;
+    text-decoration: none;
+}
+
+.menu a,
+.menu .active
+{
+    display: block;
+    padding: 18px 40px;
+    text-transform: uppercase;
+    letter-spacing: .01em; /*Расстояние между буквами*/
+}
+
+
+.logo
+{
+    position: relative;
+    margin-right: 1px;
+    left: 0;
+    display: flex;
+}
+
+body
+{
+    background-image: url(../img/background.jpg);
+    background-repeat: repeat;
+    word-wrap: break-word; /*Переносить слова*/
+    font-size: 1.2em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+footer
+{
+    position: relative; /*Относительное позицирование*/
+    width: 100%; /*Размер блоков*/
+    background: whitesmoke;
+    display: flex;
+    justify-content: center; /*В центре по горизонтали*/
+    align-items: center; /*В центре по вертикали*/
+    flex-direction: column;
+    margin-top: 100px; /*Отступ сверху*/
+    border:#000;
+    border-radius: 10px;
+    border-style: outset;
+}
+
+
+.social,
+.footmenu
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap; /*Разрешить перенос слов на новую строку*/
+
+}
+
+.social li,
+.footmenu li
+{
+    list-style: none; /*Убираем черные маркеры*/
+}
+
+.social li a
+{
+    font-size: 2em; /*Размер иконок*/
+    color: #fff;
+    margin: 0 10px;
+    display: flex;
+    transition: 0.5s; /*Плавный переход*/
+}
+
+.footmenu li a
+{
+    font-size: 1.2em; /*Размер ссылок*/
+    color:black;
+    opacity: 0.75; /*Прозрачность*/
+    margin: 0 15px;
+    text-decoration: none;
+    display: flex;
+    font-family: "BoltRounded";
+}
+
+.footmenu li a:hover
+{
+    opacity: 1;
+}
+
+footer p
+{
+    color: black;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.1em;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+table
+{
+    border-collapse: collapse;
+    line-height: 1.1;
+    display: flex;
+    position: relative;
+    margin: 20px auto;
+    justify-content: center;
+}
+
+h1
+{
+    justify-content: center;
+    display: flex;
+    position: relative;
+    margin: 10px auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:blue;
+}
+
+#h11
+{
+    color:blueviolet;
+}
+
+h1:last-of-type
+{
+    color: palevioletred;
+}
+
+th, td
+{
+    padding: 10px;
+    border: 1px solid black;
+}
+
+th
+{
+
+    background-color: antiquewhite;
+}
+
+td
+{
+    background-color: aquamarine;
+}
+
+/*https://codelab.pro/sozdaem-kartochki-tovarov-na-html-i-css/*/
+
+
+.cards
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 225px);
+    width: 100%;
+    max-width: 1080px;
+    justify-content: center;
+    justify-items: center;
+    column-gap: 30px;
+    row-gap: 40px;
+    margin: 0 auto;
+} 
+
+.card 
+{
+    top: 10px;
+    background-color: aliceblue;
+    width: 225px;
+    min-height: 350px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    transition: 0.2s;
+    position: relative;
+    border-style: dashed;
+}
+
+.card_image
+{
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.card_image > img
+{
+    width: 210px;
+    height: 210px;
+    object-fit: contain; /*Встраиваем картинку в контейнер*/
+    transition: 0.2s;
+}
+
+.card_image:hover > img
+{
+    transform: scale(1.2);
+}
+
+.card_bottom
+{
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto; /*Занимаем всю оставшуюся высоту*/
+    padding: 10px;
+}
+
+.card_title
+{
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 17px;
+    font-style: italic;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    line-height: 150%;
+    color: #414141;
+}
+
+.card_title:hover
+{
+    color: #ff6633;
+}
+
+
+.buy
+{
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    font-size: 17px;
+    color: #70c05b;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #70c05b;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: auto;
+    transition: 0.2s;
+}
+
+.buy:hover
+{
+    transform: scale(1.05);
+}
+
+
+/*CONTACT*/
+
+form
+{
+    background-color: aliceblue;
+    width: 70%;
+    margin: 50px auto;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: auto;
+    display: flex;
+    padding: 3px;
+}
+
+input
+{
+    margin-bottom: 10px;
+}
+
+textarea
+{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.main
+{
+    width: 700px;
+    min-height: 700px;
+    background-color: aliceblue;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: black;
+    border-style: outset;
+    border-radius: 5px;
+}
+
+video
+{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 100px;
+    margin-top: auto;
+}
+
+.greet
+{   
+    position: absolute;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    font-size: 26px;
+    font-style: italic;
+}
+
+.text
+{
+    position: absolute;
+    display: flex;
+    margin: 50px 5px ;
+    justify-content: center;
+    text-align: justify;
+    flex-wrap: wrap;
+}
