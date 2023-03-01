@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>  
-<link rel="stylesheet" href="./style/style.css">
 <head>
+
     <meta charset="UTF-8" />
     <title>HowSneakers</title>
     <link rel="icon" href="./img/sneakers.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="./style/style.css" type="text/css">
 </head>
+<body>
 <header>
     <div class="logo">
         <a name="topside" href="./index.html">
@@ -22,38 +24,39 @@
         </ul>
     </div>
 </header>
-<body>
     <form action="#" method="post">
         <fieldset>
             <legend>Текстовые поля</legend>
-            <label>Ваше имя: <input type="text" placeholder="Имя" required/></label> <br>
-            <label>Ваш EMail: <input type="email" placeholder="Введите ваш EMail." required/></label> <br>
-            <label>Текст обращения: <textarea placeholder="Введите ваше сообщение." required></textarea></label>
+            <div class="textfield">
+                <label>Ваше имя: <input type="text" placeholder="Имя" required/></label>
+                <label>Ваш EMail: <input type="email" placeholder="Введите ваш EMail." required/></label>
+                <label>Текст обращения: <textarea placeholder="Введите ваше сообщение." required></textarea></label>
+            </div>
             <label><button type="submit">Отправить</button></label>
             <label><button type="reset">Очистить</button></label>
         </fieldset>
         
     </form>
     <!--https://abuzov.com/formy-html/-->
-</body>
-<footer>
-    <div class="waves">
-        <div class="wave" id="wave1"></div>
-    </div>
-    <ul class="social">
-        <li><a href="https://web.telegram.org/k/" target="_blank"> <img src="./img/telegram.svg" width="36" height="36"></a></li>
-        <li><a href="https://vk.com/how_sneakers" target="_blank"> <img src="./img/vk100.svg" width="36" height="36"></a></li>
-        <li><a href="https://www.1tv.ru/news/2022-03-14/423466-v_rossii_zablokirovali_dostup_v_instagram"> <img src="./img/inst100.svg" width="36" height="36"></a></li>
-        <!--https://icons8.ru/icons/set/vk-->
-        <!--https://myrusakov.ru/css-simple-footer.html-->
-    </ul>
-    <ul class="footmenu">
-        <li><a href="#topside">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Team</a></li>
-        <li><a href="./contact.html">Contact</a></li>
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+        </div>
+        <ul class="social">
+            <li><a href="https://web.telegram.org/k/" target="_blank"> <img src="./img/telegram.svg" width="36px" height="36px"></a></li>
+            <li><a href="https://vk.com/how_sneakers" target="_blank"> <img src="./img/vk100.svg" width="36px" height="36px"></a></li>
+            <li><a href="https://www.1tv.ru/news/2022-03-14/423466-v_rossii_zablokirovali_dostup_v_instagram"> <img src="./img/inst100.svg" width="36px" height="36px"></a></li>
+            <!--https://icons8.ru/icons/set/vk-->
+            <!--https://myrusakov.ru/css-simple-footer.html-->
+        </ul>
+        <ul class="footmenu">
+            <li><a href="#topside">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="./contact.html">Contact</a></li>
     </ul>
     <p> @2023 IBuyPower | Все права защищены.</p>
 </footer>
+</body>
 </html>
